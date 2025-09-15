@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc9662e0-8928-4859-bf9c-1374d79d5166" name="Changes" comment="" />
+    <list default="true" id="bc9662e0-8928-4859-bf9c-1374d79d5166" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../docs/abstractions.mmd" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/abstractions.mmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DDDSharp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DDDSharp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDDSharp.Abstractions/DDDSharp.Abstractions.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DDDSharp.Abstractions/DDDSharp.Abstractions.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,10 +17,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="32ilFLRBhDsgOvnFElvDyI0Wi1X" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,6 +34,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -45,15 +54,57 @@
       <option name="presentableId" value="Default" />
       <updated>1757911170265</updated>
       <workItem from="1757911172586" duration="1595000" />
+      <workItem from="1757950471746" duration="2979000" />
     </task>
+    <task id="LOCAL-00001" summary="chore&lt;project&gt;: solution and DDDSharp.Abstractions project configuration">
+      <option name="closed" value="true" />
+      <created>1757950673916</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757950673916</updated>
+    </task>
+    <task id="LOCAL-00002" summary="docs&lt;abstractions&gt;: update class diagram&#10;&#10;Changed BaseEvent to DomainEvent for better representation of the concept.">
+      <option name="closed" value="true" />
+      <created>1757950792665</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757950792665</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat&lt;abstractions&gt;: implementation abstractions.mmd&#10;&#10;Implemented class diagram using copilot for code generation (Claude Sonnet v4 Model)">
+      <option name="closed" value="true" />
+      <created>1757950913018</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1757950913018</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="chore&lt;project&gt;: solution and DDDSharp.Abstractions project configuration" />
+    <MESSAGE value="docs&lt;abstractions&gt;: update class diagram&#10;&#10;Changed BaseEvent to DomainEvent for better representation of the concept." />
+    <MESSAGE value="feat&lt;abstractions&gt;: implementation abstractions.mmd&#10;&#10;Implemented class diagram using copilot for code generation (Claude Sonnet v4 Model)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat&lt;abstractions&gt;: implementation abstractions.mmd&#10;&#10;Implemented class diagram using copilot for code generation (Claude Sonnet v4 Model)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

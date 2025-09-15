@@ -3,6 +3,11 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>0.1.0</Version>
+        <Authors>Roger Roca Arano</Authors>
+        <Description>Domain-Driven Design Library for C#/dotNET Projects</Description>
+        <RepositoryUrl>https://github.com/rogerrocaarano/DDDSharp</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
