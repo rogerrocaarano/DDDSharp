@@ -11,6 +11,8 @@ classDiagram
         class IEventPublisher
         class IRepository~AggregateRoot~
         class IUnitOfWork
+        class ICommand
+        class IQuery
     }
     class Entity {
         <<Abstract>>
@@ -73,4 +75,16 @@ classDiagram
     }
     IUnitOfWork o-- IRepository~AggregateRoot~: Manages
 
-    
+    class ICommand {
+        <<Interface, Command>>
+        Id(): Guid
+        CalledAt(): DateTime
+        Validate()
+    }
+
+    class IQuery~TResult~ {
+        <<Interface, Query>>
+        Id(): Guid
+        CalledAt(): DateTime
+        Validate()
+    }
