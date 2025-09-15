@@ -1,0 +1,76 @@
+classDiagram
+    direction LR
+    namespace Domain {
+        class IValueObject
+        class IAuditable
+        class Entity
+        class AggregateRoot
+        class BaseEvent
+    }
+    namespace Application {
+        class IEventPublisher
+        class IRepository~AggregateRoot~
+        class IUnitOfWork
+    }
+    class Entity {
+        <<Abstract>>
+        #Id: Guid
+        +Id(): Guid
+    }
+    Entity *-- IValueObject
+
+    class IAuditable {
+        <<Interface>>
+        +CreatedAt(): DateTime
+        +ModifiedAt(): DateTime
+    }
+
+    class AggregateRoot {
+        <<Abstract>>
+        #_domainEvents: BaseEvent[0..*]
+        +DomainEvents(): BaseEvent[0..*]
+        #AddDomainEvent(event: BaseEvent)
+        +ClearDomainEvents()
+    }
+    AggregateRoot --|> Entity
+    AggregateRoot --|> IAuditable
+    AggregateRoot ..> BaseEvent
+    AggregateRoot -- IRepository~AggregateRoot~: saves to
+
+
+    class IValueObject~IValueObject~ {
+        <<Interface>>
+        +Equals(other: IValueObject): Boolean
+        +GetHashCode(): Int
+    }
+
+    class IEventPublisher {
+        <<Interface>>
+        +PublishAllAsync(events: BaseEvent[1..*])
+    }
+    IEventPublisher ..> BaseEvent
+
+    class BaseEvent {
+        <<Abstract, inmutable>>
+        #EventId: Guid
+        #AggregateId: Guid
+        #OccurredOn: DateTime
+        +EventId(): Guid
+        +OccurredOn(): DateTime
+}
+
+    class IRepository~AggregateRoot~ {
+        <<Interface, Repository>>
+        GetByIdAsync(id: Guid): AggregateRoot
+        AddAsync(aggregate: AggregateRoot)
+        UpdateAsync(aggregate: AggregateRoot)
+        RemoveAsync(aggregate: AggregateRoot)
+    }
+
+    class IUnitOfWork {
+        <<Interface, Service>>
+        +CommitAsync(cancellationToken: CancellationToken): Int
+    }
+    IUnitOfWork o-- IRepository~AggregateRoot~: Manages
+
+    
