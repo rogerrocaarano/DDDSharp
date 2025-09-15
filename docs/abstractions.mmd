@@ -5,7 +5,7 @@ classDiagram
         class IAuditable
         class Entity
         class AggregateRoot
-        class BaseEvent
+        class DomainEvent
     }
     namespace Application {
         class IEventPublisher
@@ -27,14 +27,14 @@ classDiagram
 
     class AggregateRoot {
         <<Abstract>>
-        #_domainEvents: BaseEvent[0..*]
-        +DomainEvents(): BaseEvent[0..*]
-        #AddDomainEvent(event: BaseEvent)
+        #_domainEvents: DomainEvent[0..*]
+        +DomainEvents(): DomainEvent[0..*]
+        #AddDomainEvent(event: DomainEvent)
         +ClearDomainEvents()
     }
     AggregateRoot --|> Entity
     AggregateRoot --|> IAuditable
-    AggregateRoot ..> BaseEvent
+    AggregateRoot ..> DomainEvent
     AggregateRoot -- IRepository~AggregateRoot~: saves to
 
 
@@ -46,11 +46,11 @@ classDiagram
 
     class IEventPublisher {
         <<Interface>>
-        +PublishAllAsync(events: BaseEvent[1..*])
+        +PublishAllAsync(events: DomainEvent[1..*])
     }
-    IEventPublisher ..> BaseEvent
+    IEventPublisher ..> DomainEvent
 
-    class BaseEvent {
+    class DomainEvent {
         <<Abstract, inmutable>>
         #EventId: Guid
         #AggregateId: Guid
