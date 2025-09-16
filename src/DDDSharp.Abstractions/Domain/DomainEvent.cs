@@ -23,14 +23,21 @@ namespace DDDSharp.Abstractions.Domain
         protected DateTime OccurredOn { get; }
 
         /// <summary>
+        /// Gets the action associated with this event.
+        /// </summary>
+        protected string Action { get; }
+
+        /// <summary>
         /// Initializes a new instance of the DomainEvent class.
         /// </summary>
         /// <param name="aggregateId">The identifier of the aggregate that raises this event.</param>
-        protected DomainEvent(Guid aggregateId)
+        /// <param name="action">The action associated with this event.</param>
+        protected DomainEvent(Guid aggregateId, string action)
         {
             EventId = Guid.NewGuid();
             AggregateId = aggregateId;
             OccurredOn = DateTime.UtcNow;
+            Action = action;
         }
 
         /// <summary>
@@ -50,5 +57,11 @@ namespace DDDSharp.Abstractions.Domain
         /// </summary>
         /// <returns>The aggregate identifier.</returns>
         public Guid GetAggregateId() => AggregateId;
+
+        /// <summary>
+        /// Gets the action associated with this event.
+        /// </summary>
+        /// <returns>The action string.</returns>
+        public string GetAction() => Action;
     }
 }

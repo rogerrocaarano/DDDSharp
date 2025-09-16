@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc9662e0-8928-4859-bf9c-1374d79d5166" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DDDSharp.Abstractions/DDDSharp.Abstractions.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DDDSharp.Abstractions/DDDSharp.Abstractions.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="bc9662e0-8928-4859-bf9c-1374d79d5166" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1757911170265</updated>
       <workItem from="1757911172586" duration="1595000" />
-      <workItem from="1757950471746" duration="3438000" />
+      <workItem from="1757950471746" duration="3516000" />
     </task>
     <task id="LOCAL-00001" summary="chore&lt;project&gt;: solution and DDDSharp.Abstractions project configuration">
       <option name="closed" value="true" />
